@@ -1,12 +1,17 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar.jsx";
 import Product from "../components/Product.jsx";
 import { BsUpcScan } from "react-icons/bs";
 import Category from "../components/Category.jsx";
 import { FiPlusCircle, FiMinusCircle, FiTrash2, FiEdit } from "react-icons/fi";
+import useFunction from "../function/useFunction.js";
 
 const HomePage = () => {
+  const { getCartData, cart, update } = useFunction();
+  useEffect(() => {
+    getCartData();
+  }, []);
   return (
     <div className="flex justify-center gap-4">
       <div className="flex-initial w-1/2">
@@ -15,94 +20,30 @@ const HomePage = () => {
         <div className="relative overflow-x-auto sm:rounded-lg py-1 px-5 rounded-md">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 border border-gray-400">
             <tbody>
-              <tr className="bg-white border   hover:bg-gray-50 ">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  <div className="flex gap-2 items-center">
-                    <FiEdit />
-                    Apple MacBook Pro 17&quot;
-                  </div>
-                </th>
-                <td className="px-6 py-4">$91</td>
-                <td className="px-6 py-4">
-                  {" "}
-                  <div className="flex justify-center items-center gap-3">
+              {cart?.map((item, index) => (
+                <tr key={index} className="bg-white border   hover:bg-gray-50 ">
+                  <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    <div className="flex gap-2 items-center">
+                      <FiEdit />
+                      {item?.name}
+                    </div>
+                  </th>
+                  <td className="px-6 py-4">${item?.price}</td>
+                  <td className="px-6 py-4">
                     {" "}
-                    <FiMinusCircle />
-                    <span>1</span>
-                    <FiPlusCircle />{" "}
-                  </div>
-                </td>
-                <td className="px-6 py-4">$299</td>
-                <td className="px-6 py-4 text-right">
-                  <FiTrash2 />
-                </td>
-              </tr>
-              <tr className="bg-white border   hover:bg-gray-50 ">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  <div className="flex gap-2 items-center">
-                    <FiEdit />
-                    Apple MacBook Pro 17&quot;
-                  </div>
-                </th>
-                <td className="px-6 py-4">$91</td>
-                <td className="px-6 py-4">
-                  {" "}
-                  <div className="flex justify-center items-center gap-3">
-                    {" "}
-                    <FiMinusCircle />
-                    <span>1</span>
-                    <FiPlusCircle />{" "}
-                  </div>
-                </td>
-                <td className="px-6 py-4">$299</td>
-                <td className="px-6 py-4 text-right">
-                  <FiTrash2 />
-                </td>
-              </tr>
-              <tr className="bg-white border   hover:bg-gray-50 ">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  <div className="flex gap-2 items-center">
-                    <FiEdit />
-                    Apple MacBook Pro 17&quot;
-                  </div>
-                </th>
-                <td className="px-6 py-4">$91</td>
-                <td className="px-6 py-4">
-                  {" "}
-                  <div className="flex justify-center items-center gap-3">
-                    {" "}
-                    <FiMinusCircle />
-                    <span>1</span>
-                    <FiPlusCircle />{" "}
-                  </div>
-                </td>
-                <td className="px-6 py-4">$299</td>
-                <td className="px-6 py-4 text-right">
-                  <FiTrash2 />
-                </td>
-              </tr>
-              <tr className="bg-white border   hover:bg-gray-50 ">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  <div className="flex gap-2 items-center">
-                    <FiEdit />
-                    Apple MacBook Pro 17&quot;
-                  </div>
-                </th>
-                <td className="px-6 py-4">$91</td>
-                <td className="px-6 py-4">
-                  {" "}
-                  <div className="flex justify-center items-center gap-3">
-                    {" "}
-                    <FiMinusCircle />
-                    <span>1</span>
-                    <FiPlusCircle />{" "}
-                  </div>
-                </td>
-                <td className="px-6 py-4">$299</td>
-                <td className="px-6 py-4 text-right">
-                  <FiTrash2 />
-                </td>
-              </tr>
+                    <div className="flex justify-center items-center gap-3">
+                      {" "}
+                      <FiMinusCircle />
+                      <span>{item?.quantity}</span>
+                      <FiPlusCircle />{" "}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4">$299</td>
+                  <td className="px-6 py-4 text-right">
+                    <FiTrash2 />
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

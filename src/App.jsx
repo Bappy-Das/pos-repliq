@@ -2,10 +2,13 @@
 import React, { useState } from "react";
 import "./App.css";
 import HomePage from "./pages/homePage";
+import AuthProvider from "./context/AuthProvider.jsx";
 function App() {
   return (
     <>
-      <HomePage></HomePage>
+      <AuthProvider>
+        <HomePage></HomePage>
+      </AuthProvider>
     </>
   );
 }
