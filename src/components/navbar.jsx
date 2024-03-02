@@ -58,7 +58,7 @@ const Navbar = () => {
       <AddCustomer />
       <div
         id="drawer-navigation"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen overflow-y-auto transition-transform ${
+        className={`fixed top-0 left-0 z-40 w-80 h-screen overflow-y-auto transition-transform duration-500 ${
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
         } bg-white`}
         tabIndex="-1"
