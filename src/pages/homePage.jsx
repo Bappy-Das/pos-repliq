@@ -5,16 +5,11 @@ import Product from "../components/Product.jsx";
 import { BsUpcScan } from "react-icons/bs";
 import Category from "../components/Category.jsx";
 import { FiPlusCircle, FiMinusCircle, FiTrash2, FiEdit } from "react-icons/fi";
-import useFunction from "../function/useFunction.js";
 import { AuthContext } from "../context/AuthProvider.jsx";
 
 const HomePage = () => {
   const { cart, countTotal } = useContext(AuthContext);
-
-  const totalsum = () => {
-    let tex = 0.05 * countTotal;
-  };
-
+  let total = countTotal + 60 + 0.05 * countTotal;
   return (
     <div className="flex justify-center gap-4">
       <div className="flex-initial w-1/2">
@@ -89,10 +84,10 @@ const HomePage = () => {
             className="text-[#7a85ce] flex items-center justify-between gap-2 bg-[#e7e9f6] font-medium rounded-md text-sm px-5 py-4 w-full"
             type="button"
           >
-            <span>Product Count(13)</span>
+            <span>Product Count ({cart.length})</span>
             <div className="w-1/3 flex items-center justify-between">
               <div className="text-xl font-bold text-blue-700 uppercase">total</div>
-              <div className="text-xl font-bold text-blue-700 uppercase">$5005.50</div>
+              <div className="text-xl font-bold text-blue-700 uppercase">${total}</div>
             </div>
           </button>
         </div>

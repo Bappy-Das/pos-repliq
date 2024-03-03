@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const useFunction=()=>{
     const [cart, setCart] = useState([]);
+
     const addToCart=(name, price, quantity)=>{
         setCart([...cart, {name, price, quantity}]);
     }

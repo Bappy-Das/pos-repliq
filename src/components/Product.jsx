@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import tShirtModel from "../assets/images/Model-T-shirt.jpg";
 import { AuthContext } from "../context/AuthProvider";
-// import useFunction from "../function/useFunction";
 
 const Product = () => {
   const { addToCart } = useContext(AuthContext);
@@ -24,7 +23,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -33,7 +35,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -42,7 +47,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -51,7 +59,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -60,7 +71,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -69,7 +83,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -78,7 +95,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -87,7 +107,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -96,7 +119,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -105,7 +131,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -114,7 +143,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -123,7 +155,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -132,7 +167,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
@@ -141,7 +179,10 @@ const Product = () => {
               </h5>
             </div>
           </div>
-          <div className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit">
+          <div
+            onClick={() => addCart("Pure White Polo", 43, 1)}
+            className="group max-w-sm bg-white border border-gray-200 rounded-md shadow cursor-pointer h-fit"
+          >
             <img className="rounded-md group-hover:opacity-95" src={tShirtModel} alt="" />
             <div className="text-center">
               <h5 className="py-2 text-xl font-bold tracking-tight text-gray-500 group-hover:text-gray-700">$43</h5>
