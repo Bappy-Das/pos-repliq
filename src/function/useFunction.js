@@ -1,26 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useFunction=()=>{
     const [cart, setCart] = useState([]);
-    const [update, setUpdate] = useState(true);
     const addToCart=(name, price, quantity)=>{
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({ name, price, quantity });
-        localStorage.setItem("cart", JSON.stringify(cart));
-        console.log(cart);
-        setUpdate(true);
+        setCart([...cart, {name, price, quantity}]);
     }
-    const getCartData=()=>{
-        let locatCartData = JSON.parse(localStorage.getItem("cart"));
-        setCart(locatCartData);
-        setUpdate(false);
-    }
-    
+    const countTotal = cart.reduce((acc, cart)=>{
+        return acc + (cart.price * cart.quantity);
+    }, 0);
     return {
         addToCart,
-        getCartData,
         cart,
-        update
+        countTotal
     }
 }
 export default useFunction;

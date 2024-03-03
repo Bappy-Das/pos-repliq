@@ -1,17 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../components/navbar.jsx";
 import Product from "../components/Product.jsx";
 import { BsUpcScan } from "react-icons/bs";
 import Category from "../components/Category.jsx";
 import { FiPlusCircle, FiMinusCircle, FiTrash2, FiEdit } from "react-icons/fi";
 import useFunction from "../function/useFunction.js";
+import { AuthContext } from "../context/AuthProvider.jsx";
 
 const HomePage = () => {
-  const { getCartData, cart, update } = useFunction();
-  useEffect(() => {
-    getCartData();
-  }, []);
+  const { cart, countTotal } = useContext(AuthContext);
+
+  const totalsum = () => {
+    let tex = 0.05 * countTotal;
+  };
+
   return (
     <div className="flex justify-center gap-4">
       <div className="flex-initial w-1/2">
@@ -53,7 +56,7 @@ const HomePage = () => {
               Sub Total
             </h5>
             <h5 id="drawer-navigation-label" className="text-base font-semibold text-gray-900 uppercase ">
-              $5025.50
+              ${countTotal}
             </h5>
           </div>
           <div className="flex justify-between w-1/3 border-t p-2">
@@ -61,7 +64,7 @@ const HomePage = () => {
               TAX
             </h5>
             <h5 id="drawer-navigation-label" className="text-base font-semibold text-gray-900 uppercase ">
-              $5025.50
+              ${0.05 * countTotal}
             </h5>
           </div>
           <div className="flex justify-between w-1/3 border-t p-2">
@@ -69,7 +72,7 @@ const HomePage = () => {
               Shipping
             </h5>
             <h5 id="drawer-navigation-label" className="text-base font-semibold text-gray-900 uppercase ">
-              $5025.50
+              $60
             </h5>
           </div>
           <div className="flex justify-between w-1/3 border-t p-2">
@@ -77,7 +80,7 @@ const HomePage = () => {
               Discount on Cart
             </h5>
             <h5 id="drawer-navigation-label" className="text-base font-semibold text-gray-900 uppercase ">
-              $5025.50
+              $0
             </h5>
           </div>
         </div>

@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import tShirtModel from "../assets/images/Model-T-shirt.jpg";
-import useFunction from "../function/useFunction";
+import { AuthContext } from "../context/AuthProvider";
+// import useFunction from "../function/useFunction";
 
 const Product = () => {
-  const { addToCart } = useFunction();
+  const { addToCart } = useContext(AuthContext);
   const addCart = (name, price, quantity) => {
     addToCart(name, price, quantity);
   };
